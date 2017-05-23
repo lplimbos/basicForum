@@ -69,11 +69,14 @@ ul{
     max-width: 30%;
     margin: 10% auto;
     padding: 10px;
-    border: 1px solid #a0a0a0;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     border-radius: 3px;
     display: block;
     color: #B1B1B1;
+}
+
+fieldset{
+    border: 1px solid #5C5C5C;
 }
 
 .loginRow, .signupRow, .questionRow{
