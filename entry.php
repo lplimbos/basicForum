@@ -63,14 +63,14 @@ and open the template in the editor.
             
             $result = DataBase::executeQuery("SELECT system_users.nickname, forum_answers.*"
                     . " FROM forum_answers INNER JOIN system_users"
-                    . " ON forum_answers.answer_id = system_users.user_id"
+                    . " ON forum_answers.user_id = system_users.user_id"
                     . " WHERE forum_answers.entry_id = ".$_GET["id"]);
             
             while($row = $result->fetch_assoc()){
                 printf("
                 <div class='entry answer'>
                     <div id='entryContent'><p>%s</p></div>
-                    <div id='entryInfo'><p>%s: %s %s</p></div>
+                    <div id='entryInfo'><p class='username'>%s:</p><p> %s %s</p></div>
                 </div>  
                 ", $row["content"],$row["nickname"],$row["date"], $row["time"]);
             }

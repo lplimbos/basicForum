@@ -52,7 +52,6 @@ class ForumAnswer {
     public function insertForumAnswer() {
         $succes = FALSE;
 
-        echo "ERRORES!:" . $conn->errno;
         /* Verifica los datos de la entrada */
         if ($this->validateForumAnswer()) {
             $conn = DataBase::getConnection();

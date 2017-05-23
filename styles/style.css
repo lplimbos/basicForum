@@ -186,6 +186,8 @@ ul{
 h2{
     font-weight: bold;
     font-size: 32px;
+    margin: 5px auto;
+    color: #DEDBDB;
 }
 
 .entry {
@@ -229,12 +231,12 @@ h3{
     margin: 15px;
 }
 
-#entryTitle, #entryContent, #entryInfo{
+#entryTitle, #entryContent{
     padding: 10px;
 }
 
 #entryTitle {
-    padding: 5px 50px;
+    padding: 5px 10px;
 }
 
 .entry h3,h5, p, a{
@@ -253,41 +255,43 @@ h3{
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     border-radius: 3px;
     display: block;
-    color: #B1B1B1;
+    color: #D8D8D8;
     overflow: auto;
 }
 
 #entryContent {
-    background-color: rgba(30,30,30,0.6);
+    background-color: rgba(20,20,20,0.6);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #entryInfo {
-    background-color: rgba(30,30,30,0.6);
+    background-color: rgba(60,60,60,0.6);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
+    padding: 2px;
 }
 
 #entryTitle{
+    background-color: rgba(20, 20, 20, 0.6);
     font-size: 18px;
+    border-bottom: 1px solid #828282;
 }
 
 .entry.answer{
     width: 100%;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .entry.answer textarea{
     border: none;
     overflow: auto;
     outline: none;
-
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     resize:none;
-
     width: 100%;
     height: 300px;
 }
@@ -348,4 +352,14 @@ h3{
     cursor: pointer;
     background-color: #232323;
     -webkit-transition: all 0.1s ease-in;
+}
+
+.entryContainer{
+    background-color: rgba(100, 100, 100, 0.8);
+    margin-bottom: 10px;
+}
+
+.username{
+    color: #AD4E21;
+    float: left;
 }
