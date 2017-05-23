@@ -1,0 +1,120 @@
+body{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #2F2F2F;
+    font-family: 'Lato', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#headerContainer{
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    height: 48px;
+    background-color: rgba(30, 30, 30, 0.8);
+    position: relative;
+    font-weight: bold;
+}
+
+#headerNav{
+    width: 90%;
+    height: 48px;
+    margin: 0 5% 0 5%;
+    position: absolute;
+}
+
+#headerNav ul{
+    width: 100%;
+    height: 100%;
+}
+
+#headerNav li{
+    float: left;
+}
+
+.headerItem{
+    float: left;
+    padding: 14px 16px;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.headerItem:hover{
+    background-color: rgba(10, 10, 10, 0.8);
+    -webkit-transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.rightItem{
+    float: right;
+}
+
+#loginContainer{
+    background-color: rgba(40, 40, 40, 0.8);
+    min-width: 350px;
+    max-width: 30%;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #a0a0a0;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 3px;
+    display: block;
+    color: #B1B1B1;
+}
+
+.loginRow{
+    width: 75%;
+    display: block;
+    margin: 10px auto 0 auto;
+    height: 90px;
+    position: relative;
+}
+
+.loginRow label{
+    font-weight: bold;
+}
+
+.loginRow input[type="text"], .loginRow input[type="password"]{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    height: 40%;
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.loginButton{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    width: 100px;
+    height: 40px;
+    background-color: #373737;
+    color: #BDB6B6;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.loginButton:hover{
+    cursor: pointer;
+    background-color: #232323;
+    -webkit-transition: all 0.1s ease-in;
+}
