@@ -84,7 +84,7 @@ and open the template in the editor.
                                     <textarea maxlength='160' name='content'></textarea>
                                 </div>
                             </div>
-                            <div id='entryInfo'><input type='submit' name='submit' value='Enviar'></div>
+                            <div id='entryButton'><input type='submit' name='submit' value='Enviar'></div>
                         </form>
                     </div>");
             }

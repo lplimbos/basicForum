@@ -297,9 +297,7 @@ h3{
 }
 
 #entryInfo input[type="submit"]{
-    border-style: none;
-    border-color: none;
-    border-width: 0;
+    border: none;
     border-radius: 2px;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     position: absolute;
@@ -362,4 +360,31 @@ h3{
 .username{
     color: #AD4E21;
     float: left;
+}
+
+.row textarea{
+    margin-bottom: 30px;
+}
+
+#entryButton{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#entryButton input[type="submit"]{
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    background-color: #3B3B3B;
+    color: white;
+    width: 70px;
+    height: 30px;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+#entryButton input[type="submit"]:hover{
+    background-color: #5E5E5E;
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease-in;
 }
