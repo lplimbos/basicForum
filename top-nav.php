@@ -61,7 +61,7 @@
                                 <div class='headerItem rightItem'><a href='./logout.php'>Log out</a></div>
                                 ");
                             printf("
-                                <div class='headerItem rightItem'><a class='%s href='./userpage.php'>%s</a></div>
+                                <div class='headerItem rightItem'><a class='%s' href='./userpage.php'>%s</a></div>
                                 ", $user,$usuario->getNickname());
                         } else {
                             printf("

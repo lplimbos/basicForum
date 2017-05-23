@@ -29,83 +29,12 @@ and open the template in the editor.
         ?>
         
         <title>Foro: entrada</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php
+        include 'meta.php';
+        ?>
 
         <style>
-            .entry {
-                width: 60%;
-                border: 2px solid #707070;
-                border-radius: 10px;
-                box-shadow: 5px 5px 10px #c0c0c0;
-                background-color: #EEEEEE;
-                margin: 25px auto;
-                position: relative;
-                display: block;
-                overflow: auto;
-            }
-
-            #entry-title, #entry-content,#entry-info{
-                padding: 10px;
-            }
-
-            #entry-title {
-                padding: 5px 50px;
-            }
-
-            #entry-content {
-                background: #FFF;
-                border-top: 2px solid #c0c0c0;
-                border-bottom: 2px solid #c0c0c0;
-                font-weight: bold;
-                font-size: 14px;
-            }
-
-            #entry-info {
-                padding: 5px 10px;
-                text-align: right;
-                color: #606060;
-                font-size: 12px;
-            }
-
-            .entry h3,h5, p, a{
-                display: block;
-                position: relative;
-                margin: 0px;
-            }
-
-            .answer {
-                margin: 5px auto;
-            }
-
-            .row{
-                overflow: hidden;
-                width: 90%;
-                position: relative;
-                display: block;
-                margin: 0px auto;
-            }
-
-            textarea {
-                resize: none;
-                border: 1px solid #A0A0A0;
-                border-radius: 10px;
-                width: 100%;
-                display: block;
-                width: 95%;
-                margin: 0 auto;
-                padding: 5px;
-                float: none;
-                position: relative;
-
-            }
             
-            input {
-                resize: none;
-                padding: 3px 10px;
-                border: 1px solid #A0A0A0;
-                border-radius: 10px;
-            }
         </style>
 
     </head>
@@ -113,7 +42,7 @@ and open the template in the editor.
 
         <?php include_once './top-nav.php'; ?>
 
-        <div id="content">
+        <div id="entryContainer">
             <?php
             require_once './control/DataBase.php';
             
@@ -124,10 +53,10 @@ and open the template in the editor.
             
             while($row = $result->fetch_assoc()){
                 printf("
-                <div class='entry'>
-                    <div id='entry-title'><h3>%s</h3></div>
-                    <div id='entry-content'><p>%s</p></div>
-                    <div id='entry-info'><p>%s: %s, %s</p></div>
+                <div class='entryContainer'>
+                    <div id='entryTitle'><h2>%s</h2></div>
+                    <div id='entryContent'><p>%s</p></div>
+                    <div id='entryInfo'><p>%s: %s, %s</p></div>
                 </div>",$row["entry"], $row["content"], $row["topic"], $row["date"], $row["time"]);
             }
             
@@ -140,8 +69,8 @@ and open the template in the editor.
             while($row = $result->fetch_assoc()){
                 printf("
                 <div class='entry answer'>
-                    <div id='entry-content'><p>%s</p></div>
-                    <div id='entry-info'><p>%s: %s %s</p></div>
+                    <div id='entryContent'><p>%s</p></div>
+                    <div id='entryInfo'><p>%s: %s %s</p></div>
                 </div>  
                 ", $row["content"],$row["nickname"],$row["date"], $row["time"]);
             }
@@ -149,13 +78,13 @@ and open the template in the editor.
                 printf("
                     <div class='entry answer'>
                         <form name='answer' action='#' method='POST'>
-                            <div id='entry-title'><h5>Responde a la pregunta:</h5></div>
-                            <div id='entry-content'>
+                            <div id='entryTitle'><h5>Responde a la pregunta:</h5></div>
+                            <div id='entryContent'>
                                 <div class='row'>
                                     <textarea maxlength='160' name='content'></textarea>
                                 </div>
                             </div>
-                            <div id='entry-info'><input type='submit' name='submit' value='Enviar'></div>
+                            <div id='entryInfo'><input type='submit' name='submit' value='Enviar'></div>
                         </form>
                     </div>");
             }

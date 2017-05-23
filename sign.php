@@ -73,52 +73,53 @@ and open the template in the editor.
             include 'top-nav.php';
         ?>
         
-        <div id="content">
+        <div id="signupContainer">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                 <fieldset id="signup">
                     <legend>Sign Up</legend>
                     <div class="form">
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Nombre(s):</label>
                             <input type="text" name="name">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Apellidos:</label>
                             <input type="text" name="surname">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Nickname:</label>
                             <input type="text" name="nickname">
                         </div>
-                        <div class="row">
+                        
+                        <div class="signupRow">
                             <label>Password:</label>
                             <input type="password" name="password">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Re-type Password:</label>
                             <input type="password" name="repassword">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>E-Mail:</label>
                             <input type="text" name="email">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Fecha de Nacimiento:</label>
-                            <select name="day">
+                            <select name="day" class="day">
                                 <?php
                                 for ($day = 1; $day <= 31; $day++) {
                                     echo "<option value='$day'>$day</option>";
                                 }
                                 ?>
                             </select>
-                            <select name="month">
+                            <select name="month" class="month">
                                 <?php
                                 for ($month = 1; $month <= 12; $month++) {
                                     echo "<option value='$month'>$month</option>";
                                 }
                                 ?>
                             </select>
-                            <select name="year">
+                            <select name="year" class="year">
                                 <?php
                                 for ($year = 2017; $year > 1980; $year--) {
                                     echo "<option value='$year'>$year</option>";
@@ -126,8 +127,8 @@ and open the template in the editor.
                                 ?>
                             </select>
                         </div>
-                        <div class="row buttons">
-                            <input type="reset" value="Borrar"><input type="submit" name="sign-user" value="Envíar">
+                        <div class="signupRow buttons">
+                            <input type="reset" value="Borrar" class="signupButton" id="signupBorrar"><input type="submit" name="sign-user" value="Envíar" class="signupButton" id="signupEnviar">
                         </div>
                     </div>
                 </fieldset>

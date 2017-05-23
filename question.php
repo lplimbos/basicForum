@@ -18,18 +18,18 @@ and open the template in the editor.
         include './top-nav.php';
         ?>
 
-        <div id="content">
+        <div id="containerQuestion">
             <div id="new-question">
                 <form action="ask.php" method="POST" enctype="multipart/form-data">
-                    <div class="row">
+                    <div class="questionRow">
                         <label>Pregunta:</label>
                         <input type="text" name="title">
                     </div>
-                    <div class="row">
+                    <div class="questionRowText">
                         <label>Detalles:</label>
                         <textarea maxlength="160" name="content"></textarea>
                     </div>
-                    <div class="row">
+                    <div class="questionRow">
                         <label>Tema:</label>
                         <select name="topic">
                             <?php
@@ -43,7 +43,7 @@ and open the template in the editor.
                             ?>
                         </select>
                     </div>
-                    <div class="row">
+                    <div class="questionRow">
                         <input type="submit" name="question" value="Publicar">  
                     </div>
                 </form>

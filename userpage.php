@@ -67,26 +67,26 @@ and open the template in the editor.
         $usuario = new User($_COOKIE['forum-user-id']);
         ?>
 
-        <div id="content">
+        <div id="signupContainer">
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                 <fieldset id="signup">
                     <legend>Datos de usuario</legend>
                     <div class="form">
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Nombre(s):</label>
                             <input type="text" name="name" value="<?php echo $usuario->getName(); ?>">
                         </div>
-                        <div class="row">
+                        <div class="signupRow">
                             <label>Apellidos:</label>
                             <input type="text" name="surname" value='<?php echo $usuario->getSurname(); ?>'>
                         </div>    
-                        <div class="row">
+                        <div class="signupRow">
                             <label>E-Mail:</label>
                             <input type="text" name="email" value="<?php echo $usuario->getEmail(); ?>">
                         </div>
 
-                        <div class="row buttons">
-                            <input type="submit" name="deluser" value="Eliminar Usuario"><input type="submit" name="modificar" value="Envíar">
+                        <div class="signupRow buttons">
+                            <input type="submit" name="deluser" value="Eliminar Usuario" class="signupButton" id="modificarBorrar"><input type="submit" name="modificar" value="Envíar" class="signupButton" id="modificarEnviar">
                         </div>
                     </div>
                 </fieldset>

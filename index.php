@@ -32,8 +32,8 @@ and open the template in the editor.
             </div>
         </div-->
         
-        <div id="last-entrys" class="entrys-container">
-            <h3>Ultimas Entradas</h3>
+        <div id="latestEntries" class="entriesContainer">
+            <h2>Ultimas Entradas</h2>
             <?php
             require_once './control/DataBase.php';
             
@@ -43,12 +43,12 @@ and open the template in the editor.
             
             while($row = $result->fetch_assoc()){
                 printf("
-                    <div class='forum-entry'>
+                    <div class='forumEntry'>
                         <div class='entry'>
                             <h3><a href='entry.php?id=%s'>%s</a></h3>
-                            <a href='' class='forum-topic'>%s</a>
+                            <a href='' class='forumTopic'>%s</a>
                         </div>
-                        <div class='entry entry-info'>
+                        <div class='entryInfo'>
                             <!--p>5 answers</p-->
                             <p>%s</p>
                             <p>%s</p>

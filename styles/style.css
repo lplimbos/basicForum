@@ -5,6 +5,7 @@ body{
     background-size: cover;
     color: #2F2F2F;
     font-family: 'Lato', sans-serif;
+    height: 100%;
 }
 
 a{
@@ -45,8 +46,11 @@ ul{
 
 .headerItem{
     float: left;
-    padding: 14px 16px;
     -webkit-transition: all 0.1s ease-in;
+}
+
+.headerItem a{
+    padding: 14px 16px;
 }
 
 .headerItem:hover{
@@ -59,7 +63,7 @@ ul{
     float: right;
 }
 
-#loginContainer{
+#loginContainer, #signupContainer, #containerQuestion{
     background-color: rgba(40, 40, 40, 0.8);
     min-width: 350px;
     max-width: 30%;
@@ -72,7 +76,7 @@ ul{
     color: #B1B1B1;
 }
 
-.loginRow{
+.loginRow, .signupRow, .questionRow{
     width: 75%;
     display: block;
     margin: 10px auto 0 auto;
@@ -80,11 +84,11 @@ ul{
     position: relative;
 }
 
-.loginRow label{
+.loginRow label, .signupRow label, .questionRow label, .questionRowText label{
     font-weight: bold;
 }
 
-.loginRow input[type="text"], .loginRow input[type="password"]{
+.loginRow input[type="text"], .loginRow input[type="password"], .signupRow input[type="text"], .signupRow input[type="password"], .questionRow input[type="text"]{
     border-style: none;
     border-color: none;
     border-width: 0;
@@ -97,7 +101,234 @@ ul{
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
-.loginButton{
+.loginButton, .signupButton{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    width: 100px;
+    height: 40px;
+    background-color: #373737;
+    color: #BDB6B6;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.loginButton:hover, .signupButton:hover{
+    cursor: pointer;
+    background-color: #232323;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.signupRow select{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    position: absolute;
+    height: 40%;
+    width: 22%;
+    border-radius: 3px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.day{
+    top: 30%;
+    left: 10%;   
+}
+
+.month{
+    top: 30%;
+    left: 40%;
+}
+
+.year{
+    top: 30%;
+    left: 70%;
+}
+
+#signupBorrar{
+    top: 30%;
+    left: 10%;
+}
+
+#signupEnviar{
+    top: 30%;
+    right: -5%;
+}
+
+#modificarBorrar{
+    top: 30%;
+    left: 10%;
+    width: 160px;
+}
+
+#modificarEnviar{
+    top: 30%;
+    right: -15%;
+}
+
+#latestEntries{
+    background-color: rgba(40, 40, 40, 0.8);
+    min-width: 350px;
+    max-width: 50%;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #a0a0a0;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 3px;
+    display: block;
+    color: #B1B1B1;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.entry {
+    overflow: auto;
+    float: left; 
+}
+
+.forumEntry{
+    background-color: rgba(100,100, 100, 0.3);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 3px;
+    border: 1px solid #848484;
+    display: block;
+    width: auto;
+    padding: 10px;
+    overflow: auto;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.forumTopic{
+    border: 1px solid #949494;
+    border-radius: 2px;
+    background-color: #C7C5C5;
+    color: #5A5A5A;
+    float: left;
+    margin: 10px;
+    padding: 2px;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.forumTopic:hover{
+    background-color: #7D7A7A;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.entryInfo{
+    float: right;
+    margin: 15px;
+}
+
+#entryTitle, #entryContent, #entryInfo{
+    padding: 10px;
+}
+
+#entryTitle {
+    padding: 5px 50px;
+}
+
+.entry h3,h5, p, a{
+    display: block;
+    position: relative;
+    margin: 0px;
+}
+
+#entryContainer {
+    background-color: rgba(40, 40, 40, 0.8);
+    min-width: 350px;
+    max-width: 60%;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #a0a0a0;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 3px;
+    display: block;
+    color: #B1B1B1;
+    overflow: auto;
+}
+
+#entryContent {
+    background-color: rgba(30,30,30,0.6);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#entryInfo {
+    background-color: rgba(30,30,30,0.6);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#entryTitle{
+    font-size: 18px;
+}
+
+.entry.answer{
+    width: 100%;
+    position: relative;
+}
+
+.entry.answer textarea{
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize:none;
+
+    width: 100%;
+    height: 300px;
+}
+
+#entryInfo input[type="submit"]{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    background-color: #4A4545;
+    color: white;
+    width: 10%;
+    height: 8%;
+}
+
+.questionRowText textarea{
+    border-style: none;
+    border-color: none;
+    border-width: 0;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 300px;
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.questionRowText{
+    width: 75%;
+    display: block;
+    margin: 10px auto 0 auto;
+    height: 350px;
+    position: relative;
+}
+
+.questionRow input[type="submit"]{
     border-style: none;
     border-color: none;
     border-width: 0;
@@ -113,7 +344,7 @@ ul{
     -webkit-transition: all 0.1s ease-in;
 }
 
-.loginButton:hover{
+.questionRow input[type="submit"]:hover{
     cursor: pointer;
     background-color: #232323;
     -webkit-transition: all 0.1s ease-in;
