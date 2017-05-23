@@ -15,7 +15,7 @@ class DataBase {
 
     const SERVER = "localhost";
     const USER = "root";
-    const PASSWORD = "";
+    const PASSWORD = "FALL0ut";
     const DATABASE = "forum";
 
     private static $connection;
